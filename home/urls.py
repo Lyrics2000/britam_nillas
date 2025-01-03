@@ -29,6 +29,7 @@ from .views import (
     BeneficiaryDetailsApiView,
 )
 
+app_name = "home"
 
 urlpatterns = [
     path("create-member/", CreateMemberApiView.as_view(), name="create-member"),
