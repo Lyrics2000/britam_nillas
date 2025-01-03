@@ -27,6 +27,13 @@ from .views import (
     SubmitMedicalsApiView,
     SubmitAdditionalMedicalsApiView,
     BeneficiaryDetailsApiView,
+    NomineeDetailsApiView,
+    SubSequentPaymentApiView,
+    FinalSubmissionCaseApplicationApiView,
+    AsCodeRelationshipsApiView,
+    AsCodeBritamOccupationApiView,
+    AsCodeClientPrefixApiView,
+    AsCodeMaritalStatusApiView
 )
 
 app_name = "home"
@@ -59,4 +66,31 @@ urlpatterns = [
     path("submit-medicals/", SubmitMedicalsApiView.as_view(), name="submit-medicals"),
     path("submit-additional-medicals/", SubmitAdditionalMedicalsApiView.as_view(), name="submit-additional-medicals"),
     path("beneficiary-details/", BeneficiaryDetailsApiView.as_view(), name="beneficiary-details"),
+    path("nominee-details/", NomineeDetailsApiView.as_view(), name="nominee-details"),
+     path("subsequent-payment/", SubSequentPaymentApiView.as_view(), name="subsequent-payment"),
+     path(
+        "final-submission-case-application/",
+        FinalSubmissionCaseApplicationApiView.as_view(),
+        name="final-submission-case-application",
+    ),
+     path(
+        "as-code-relationships/",
+        AsCodeRelationshipsApiView.as_view(),
+        name="as-code-relationships",
+    ),
+      path(
+        "as-code-britam-occupation/",
+        AsCodeBritamOccupationApiView.as_view(),
+        name="as-code-britam-occupation",
+    ),
+    path(
+        "as-code-client-prefix/",
+        AsCodeClientPrefixApiView.as_view(),
+        name="as-code-client-prefix",
+    ),
+    path(
+        "as-code-marital-status/",
+        AsCodeMaritalStatusApiView.as_view(),
+        name="as-code-marital-status",
+    )
 ]

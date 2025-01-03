@@ -164,7 +164,7 @@ class ProductSearchApiView(BaseAPIView):
     role = settings.API_NILAS_PRODUCT_SEARCH
     endpoint = "uw_product/getProductsByAge"
     method = "GET"
-    has_params = True
+    has_body = True
 
 class CreateQuoteApiView(BaseAPIView):
     role = settings.API_NILAS_CREATE_QUOTE
@@ -194,13 +194,13 @@ class GetAllPlanApiView(BaseAPIView):
     role = settings.API_NILAS_GET_ALL_PLAN
     endpoint = "uw_product/getAllPlanByAge"
     method = "GET"
-    has_params = True
+    has_body =True
 
 class GetAllProductByPlanNoApiView(BaseAPIView):
     role = settings.API_NILAS_GET_ALL_PRODUCT_BY_PLAN_NO
     endpoint = "uw_product/getAllProductByPlanNo"
     method = "GET"
-    has_params = True
+    has_body =  True
 
 class GetFrequencyApiView(BaseAPIView):
     role = settings.API_NILAS_GET_FREQUENCY
@@ -297,3 +297,60 @@ class BeneficiaryDetailsApiView(BaseAPIView):
     endpoint = "uw_case/beneficiaryDetails"
     method = "POST"
     has_body = True
+
+
+class NomineeDetailsApiView(BaseAPIView):
+    role = settings.API_NILAS_NOMINEE_DETAILS
+    endpoint = "uw_nominee/nomineeDetails"
+    method = "POST"
+    has_body = True
+
+class SubSequentPaymentApiView(BaseAPIView):
+    role = settings.API_NILAS_SUBSEQUENT_PAYMENT
+    endpoint = "uw_payments/subSequentPayment"
+    method = "POST"
+    has_body = True
+
+
+class FinalSubmissionCaseApplicationApiView(BaseAPIView):
+    role = settings.API_NILAS_FINAL_SUBMISSION_CASE_APPLICATION
+    endpoint = "uw_case/finalSubmissionCaseApplication"
+    method = "POST"
+    has_body = True
+
+
+
+class AsCodeRelationshipsApiView(BaseAPIView):
+    role = settings.API_NILAS_AS_CODE_RELATIONSHIPS
+    endpoint = "code/relationships"
+    method = "GET"
+    has_body = False
+    has_params = True
+
+
+
+class AsCodeBritamOccupationApiView(BaseAPIView):
+    role = settings.API_NILAS_AS_CODE_BRITAM_OCCUPATION
+    endpoint = "code/britam/occupation"
+    method = "GET"
+    has_body = False
+    has_params = True
+
+
+
+class AsCodeClientPrefixApiView(BaseAPIView):
+    role = settings.API_NILAS_AS_CODE_CLIENT_PREFIX
+    endpoint = "code/client/prefix"
+    method = "GET"
+    has_body = False
+    has_params = True
+
+
+class AsCodeMaritalStatusApiView(BaseAPIView):
+    role = settings.API_NILAS_AS_CODE_MARITAL_STATUS
+    endpoint = "code/marital/status"
+    method = "GET"
+    has_body = False
+    has_params = True
+
+
