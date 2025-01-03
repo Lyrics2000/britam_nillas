@@ -1,0 +1,38 @@
+From python:3.10.4
+
+
+
+# Download and install Oracle Instant Client
+WORKDIR /usr/src/britam/etims/app/dev
+
+# Update package lists and install dependencies
+# RUN apt-get update && apt-get install -y libaio1
+
+# # Copy Oracle Instant Client files to /tmp/
+# COPY instantclient-basic-linux.x64-21.13.0.0.0dbru.zip /tmp/
+# COPY instantclient-sdk-linux.x64-21.13.0.0.0dbru.zip /tmp/
+
+# # Create necessary directories
+# RUN mkdir -p /usr/local/instantclient
+
+# # Unzip Oracle Instant Client files to /usr/local/instantclient
+# RUN unzip /tmp/instantclient-basic-linux.x64-21.13.0.0.0dbru.zip -d /usr/local/ \
+#     && unzip /tmp/instantclient-sdk-linux.x64-21.13.0.0.0dbru.zip -d /usr/local/ \
+#     && ln -s /usr/local/instantclient_21_13 /usr/local/instantclient \
+#     && rm /tmp/instantclient-basic-linux.x64-21.13.0.0.0dbru.zip /tmp/instantclient-sdk-linux.x64-21.13.0.0.0dbru.zip
+
+# # Set environment variables for Oracle Instant Client
+# ENV LD_LIBRARY_PATH=/usr/local/instantclient
+# ENV ORACLE_HOME=/usr/local/instantclient
+
+
+
+# Copy the rest of the application files to the working directory
+COPY . /usr/src/britam/etims/app/dev
+
+# Upgrade pip and install dependencies
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r requirements.txt
+
+# # Run the production script
+CMD ["/bin/bash", "./oracle-script-dev.sh"]

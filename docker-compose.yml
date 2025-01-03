@@ -1,0 +1,29 @@
+version: '2'
+services:
+  
+      
+  api_nilas_uat:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    image: acruksaksbritam3753.azurecr.io/api_nilas_prod:1.6
+    restart: always
+    volumes:
+      - ./:/usr/src/britam/api_nilas/uat
+    ports:
+      - 9500:9500
+      # - 8010:8010
+
+
+   
+    
+
+
+
+
+  
+     
+
+
+volumes:
+  pgdata:
