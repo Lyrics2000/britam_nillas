@@ -1,6 +1,6 @@
 import requests
 
-from config.settings import (BASE_URL,
+from config.settings import (
                              USERNAME,
                              PASSWORD)
 import logging
@@ -12,12 +12,12 @@ logger = logging.getLogger(__name__)
 import json
 
 class HTTPRequest:
-    def _init_(self):
-        self.base_url = BASE_URL
+    def _init_(self,base_url):
+        self.base_url = base_url
 
     def is_connection_live(self):
         try:
-            response = requests.get(BASE_URL,verify=False)
+            response = requests.get(self.base_url,verify=False)
             js_data  =  response.text
             logger.info(f"checking if data is available for  {js_data}")
             print(f"checking if data is available for  {js_data}")
@@ -69,7 +69,7 @@ class HTTPRequest:
 
         logger.info(f"The payload is : {payload} ")
 
-        url = BASE_URL + url
+        url = self.base_url + url
         logger.info("The get url is {url}")
         response = requests.get(url, params=params,data =  payload, headers=headers,verify=False,auth=HTTPBasicAuth(USERNAME, PASSWORD))
         try:
@@ -91,7 +91,7 @@ class HTTPRequest:
             
             "content-type": "application/json"
         }
-        url = BASE_URL + url
+        url = self.base_url + url
         
         print("the url is ", url)
         logger.info(f"the data us {data}")
