@@ -36,15 +36,15 @@ class BaseAPIView(APIView):
         http_client = HTTPRequest(self.base_url)
         if self.method == "GET":
             
-            return http_client.send_get_request(self.endpoint,body=body,params=params)
+            return http_client.send_get_request(f"{self.base_url}{self.endpoint}",body=body,params=params)
         elif self.method == "POST":
-            return http_client.send_post_request(self.endpoint, data=body)
+            return http_client.send_post_request(f"{self.base_url}{self.endpoint}", data=body)
         elif self.method == "PUT":
-            return http_client.send_put_request(self.endpoint, data=body)
+            return http_client.send_put_request(f"{self.base_url}{self.endpoint}", data=body)
         elif self.method == "PATCH":
-            return http_client.send_patch_request(self.endpoint, data=body)
+            return http_client.send_patch_request(f"{self.base_url}{self.endpoint}", data=body)
         elif self.method == "DELETE":
-            return http_client.send_delete_request(self.endpoint, params=params)
+            return http_client.send_delete_request(f"{self.base_url}{self.endpoint}", params=params)
         
 
         else:
