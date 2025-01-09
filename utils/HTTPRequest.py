@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 import json
 
 class HTTPRequest:
-    def _init_(self,base_url):
+    def __init__(self,base_url):
         self.base_url = base_url
 
     def is_connection_live(self):
