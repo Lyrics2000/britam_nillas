@@ -20,8 +20,6 @@ class HTTPRequest:
             response = requests.get(self.base_url,verify=False)
             js_data  =  response.text
             logger.info(f"checking if data is available for  {js_data}")
-            print(f"checking if data is available for  {js_data}")
-            
     
             return True
         except requests.exceptions.RequestException as e:
@@ -55,7 +53,7 @@ class HTTPRequest:
 
 
     def send_get_request(self, url,body=None, params=None, headers=None):
-        logger.info("The url is {url}")
+        logger.info(f"The url is {url}")
 
         logger.info(f"The data sent is {body}")
         if not self.is_connection_live():
