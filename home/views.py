@@ -35,6 +35,7 @@ class BaseAPIView(APIView):
         body, params = self.process_request(request)
         http_client = HTTPRequest(self.base_url)
         if self.method == "GET":
+            
             return http_client.send_get_request(self.endpoint,body=body,params=params)
         elif self.method == "POST":
             return http_client.send_post_request(self.endpoint, data=body)
@@ -45,7 +46,7 @@ class BaseAPIView(APIView):
         elif self.method == "DELETE":
             return http_client.send_delete_request(self.endpoint, params=params)
         
-        
+
         else:
             raise ValueError(f"Unsupported HTTP method: {self.method}")
 
