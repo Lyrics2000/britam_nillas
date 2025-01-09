@@ -66,7 +66,7 @@ class HTTPRequest:
         url1 = self.base_url + url
         logger.info(f"The get url is {url1}")
         logger.info(f"the query params are {params}")
-        response = requests.get(url1, params=params, headers=headers,verify=False,auth=HTTPBasicAuth(USERNAME, PASSWORD))
+        response = requests.get(url1,verify=False,auth=HTTPBasicAuth(USERNAME, PASSWORD))
         try:
             logger.info(f"the post response is {response.json()}")
         except:
