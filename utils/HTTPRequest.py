@@ -24,9 +24,7 @@ class HTTPRequest:
         except requests.exceptions.RequestException as e:
             logger.error(f"The http error is {e}")
             return False
-        
-
-
+ 
     def send_get_with_body(self,url,data):
         logger.info("The url is {endpoint}")
 
@@ -50,7 +48,6 @@ class HTTPRequest:
         return response
 
 
-
     def send_get_request(self, url,body=None, params=None, headers=None):
         logger.info(f"The url is {url}")
 
@@ -66,9 +63,9 @@ class HTTPRequest:
 
         logger.info(f"The payload is : {payload} ")
 
-        url = self.base_url + url
-        logger.info("The get url is {url}")
-        response = requests.get(url, params=params,data =  payload, headers=headers,verify=False,auth=HTTPBasicAuth(USERNAME, PASSWORD))
+        url1 = self.base_url + url
+        logger.info(f"The get url is {url1}")
+        response = requests.get(url1, params=params,data =  payload, headers=headers,verify=False,auth=HTTPBasicAuth(USERNAME, PASSWORD))
         try:
             logger.info(f"the post response is {response.json()}")
         except:
