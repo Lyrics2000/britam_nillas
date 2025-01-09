@@ -19,8 +19,7 @@ class HTTPRequest:
         try:
             response = requests.get(self.base_url,verify=False)
             js_data  =  response.text
-            logger.info(f"checking if data is available for  {js_data}")
-    
+      
             return True
         except requests.exceptions.RequestException as e:
             logger.error(f"The http error is {e}")
