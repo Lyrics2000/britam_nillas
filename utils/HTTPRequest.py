@@ -54,7 +54,7 @@ class HTTPRequest:
 
 
 
-    def send_get_request(self, url,body=None, params=None):
+    def send_get_request(self, url,body=None, params=None, headers=None):
         logger.info("The url is {endpoint}")
 
         logger.info(f"The data sent is {body}")
@@ -64,12 +64,6 @@ class HTTPRequest:
             return None
         payload =  None
 
-
-       
-        headers = {
-                'Authorization': 'Basic c2xhZG1pbjpzbGFkbWluMTIz'
-            }
-        
         if body:
             payload = json.dumps(body)
 
@@ -77,7 +71,7 @@ class HTTPRequest:
 
         url = self.base_url + url
         logger.info("The get url is {url}")
-        response = requests.get(url, params=params,data =  payload, headers=headers)
+        response = requests.get(url, params=params,data =  payload, headers=headers,verify=False,auth=HTTPBasicAuth(USERNAME, PASSWORD))
         try:
             logger.info(f"the post response is {response.json()}")
         except:
