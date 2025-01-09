@@ -56,7 +56,7 @@ class BaseAPIView(APIView):
         Handles scenarios where a GET request may have a body, params, both, or neither.
         """
         body = request.data if self.has_body else None
-        params = request.query_params if self.has_params else None
+        params = request.query_params.dict() if self.has_params else None
 
         return body, params
     
