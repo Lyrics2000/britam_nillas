@@ -64,7 +64,7 @@ class HTTPRequest:
 
         logger.info(f"The payload is : {payload} ")
 
-        url1 = self.base_url + url + query_string = "?" + urlencode(params, safe='" ')
+        url1 = self.base_url + url + "?" + urlencode(params, safe='" ')
         logger.info(f"The get url is {url1}")
         logger.info(f"the query params are {params}")
         response = requests.get(url1,verify=False,auth=HTTPBasicAuth(USERNAME, PASSWORD))
