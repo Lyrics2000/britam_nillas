@@ -67,7 +67,7 @@ class HTTPRequest:
 
        
         headers = {
-                'Authorization: Basic c2xhZG1pbjpzbGFkbWluMTIz'
+                'Authorization': 'Basic c2xhZG1pbjpzbGFkbWluMTIz'
             }
         
         if body:
@@ -77,7 +77,7 @@ class HTTPRequest:
 
         url = self.base_url + url
         logger.info("The get url is {url}")
-        response = requests.get(url, params=params,data =  payload, headers=headers,verify=False)
+        response = requests.get(url, params=params,data =  payload, headers=headers)
         try:
             logger.info(f"the post response is {response.json()}")
         except:
