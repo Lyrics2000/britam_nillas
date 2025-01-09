@@ -45,6 +45,7 @@ class BaseAPIView(APIView):
         elif self.method == "DELETE":
             return http_client.send_delete_request(self.endpoint, params=params)
         
+        
         else:
             raise ValueError(f"Unsupported HTTP method: {self.method}")
 
