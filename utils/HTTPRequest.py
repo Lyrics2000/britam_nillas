@@ -54,30 +54,33 @@ class HTTPRequest:
 
 
 
-    def send_get_request(self, url,body=None, params=None, headers=None):
-        logger.info("The url is {endpoint}")
-
-        logger.info(f"The data sent is {body}")
+    def send_get_request(self, url, body=None, params=None, headers=None):
+        logger.info(f"The GET URL endpoint: {url}")
         if not self.is_connection_live():
             logger.info("Connection is not live.")
             print("Connection is not live.")
             return None
-        payload =  None
-
-        if body:
-            payload = json.dumps(body)
-
-        logger.info(f"The payload is : {payload} ")
 
         url = self.base_url + url
-        logger.info("The get url is {url}")
-        response = requests.get(url, params=params,data =  payload, headers=headers,verify=False,auth=HTTPBasicAuth(USERNAME, PASSWORD))
+
+        logger.info(f"Base URL with endpoint: {url}")
+        logger.info(f"Query parameters: {params}")
+
+        if headers is None:
+            headers = {"Content-Type": "application/json"}
+
         try:
-            logger.info(f"the post response is {response.json()}")
-        except:
-            logger.info(f"the post response is {response.text}")
-        return response
-    
+            response = requests.get(url, params=params, headers=headers, verify=False, auth=HTTPBasicAuth(USERNAME, PASSWORD))
+            logger.info(f"HTTP GET Response Status Code: {response.status_code}")
+            try:
+                logger.info(f"HTTP GET Response JSON: {response.json()}")
+            except ValueError:
+                logger.info(f"HTTP GET Response Text: {response.text}")
+            return response
+        except requests.exceptions.RequestException as e:
+            logger.error(f"Error during GET request: {e}")
+            return None
+
     
 
     def send_post_request(self, url, params=None, data=None):
