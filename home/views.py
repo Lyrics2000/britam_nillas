@@ -172,7 +172,7 @@ class ProductSearchApiView(BaseAPIView):
     endpoint = "uw_product/getProductsByAge"
     method = "GET"
     has_body = True
-    base_url = "http://10.10.3.237:9099"
+    base_url = "http://10.10.3.237:9099/"
 
 class CreateQuoteApiView(BaseAPIView):
     role = settings.API_NILAS_CREATE_QUOTE
@@ -281,7 +281,7 @@ class InitialPaymentDetailsApiView(BaseAPIView):
 
 class PaymentDetailsApiView(BaseAPIView):
     role = settings.API_NILAS_PAYMENT_DETAILS
-    endpoint = "/uw_polPremium/paymentDetails"
+    endpoint = "uw_polPremium/paymentDetails"
     method = "POST"
     has_body = True
     base_url = "http://10.10.3.237:9099/"

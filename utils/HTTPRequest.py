@@ -57,17 +57,19 @@ class HTTPRequest:
             logger.info("Connection is not live.")
             print("Connection is not live.")
             return None
-        payload =  {}
+        payload =  None
 
         if body:
             payload = json.dumps(body)
 
         logger.info(f"The payload is : {payload} ")
-
+        headers = {
+            'Content-Type': 'application/json'
+            }
         url1 = self.base_url + url + "?" + urlencode(params, safe='" ')
         logger.info(f"The get url is {url1}")
         logger.info(f"the query params are {params}")
-        response = requests.get(url1,verify=False,auth=HTTPBasicAuth(USERNAME, PASSWORD))
+        response = requests.get(url1,data=payload,headers=headers,verify=False,auth=HTTPBasicAuth(USERNAME, PASSWORD))
         try:
             logger.info(f"the post response is {response.json()}")
         except:
