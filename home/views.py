@@ -223,7 +223,7 @@ class GetAllProductByPlanNoApiView(BaseAPIView):
 
 class GetFrequencyApiView(BaseAPIView):
     role = settings.API_NILAS_GET_FREQUENCY
-    endpoint = "PASService/rest/services/queries/GetFrequencyDetails"
+    endpoint = "PASService/rest/services/v1/codes"
     method = "GET"
     has_params = True
     base_url = "http://10.10.3.236:8012/"
