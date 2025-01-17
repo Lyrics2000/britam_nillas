@@ -175,7 +175,7 @@ class CreateMemberLifeStyleApiView(BaseAPIView):
 class ProductSearchApiView(BaseAPIView):
     role = settings.API_NILAS_PRODUCT_SEARCH
     endpoint = "uw_product/getProductsByAge"
-    method = "GET"
+    method = "SEND_AS_GET"
     has_body = True
     base_url = "http://10.10.3.237:9099/"
 
@@ -217,7 +217,7 @@ class GetAllPlanApiView(BaseAPIView):
 class GetAllProductByPlanNoApiView(BaseAPIView):
     role = settings.API_NILAS_GET_ALL_PRODUCT_BY_PLAN_NO
     endpoint = "uw_product/getAllProductByPlanNo"
-    method = "GET"
+    method = "SEND_AS_GET"
     has_body =  True
     base_url = "http://10.10.3.237:9099/"
 
