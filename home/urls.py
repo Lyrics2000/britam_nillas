@@ -33,7 +33,8 @@ from .views import (
     AsCodeRelationshipsApiView,
     AsCodeBritamOccupationApiView,
     AsCodeClientPrefixApiView,
-    AsCodeMaritalStatusApiView
+    AsCodeMaritalStatusApiView,
+    GetClientsApiView
 )
 
 app_name = "home"
@@ -51,6 +52,7 @@ urlpatterns = [
     path("get-all-plan/", GetAllPlanApiView.as_view(), name="get-all-plan"),
     path("get-all-product-by-plan-no/", GetAllProductByPlanNoApiView.as_view(), name="get-all-product-by-plan-no"),
     path("get-frequency/", GetFrequencyApiView.as_view(), name="get-frequency"),
+    path("get-clients/",GetClientsApiView.as_view(),name="api-get-clients"),
     path("get-durations/", GetDurationsApiView.as_view(), name="get-durations"),
     path("customer-search/", CustomerSearchApiView.as_view(), name="customer-search"),
     path("get-premium-limits/", GetPremiumLimitsApiView.as_view(), name="get-premium-limits"),

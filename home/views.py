@@ -228,6 +228,13 @@ class GetFrequencyApiView(BaseAPIView):
     has_params = True
     base_url = "http://10.10.3.236:8012/"
 
+class GetClientsApiView(BaseAPIView):
+    role = settings.API_NILAS_GET_CLIENTS
+    endpoint = "PASService/rest/services/v1/clients"
+    method = "GET"
+    has_params = True
+    base_url = "http://10.10.3.236:8012/"
+
 class GetDurationsApiView(BaseAPIView):
     role = settings.API_NILAS_GET_DURATIONS
     endpoint = "PASService/rest/services/queries/GetDurationDetails"
