@@ -35,6 +35,7 @@ class BaseAPIView(APIView):
         """
         body, params = self.process_request(request)
         logger.info(f"Body: {body}, Params:{params}")
+        logger.info(f"HasBody: {self.has_body}")
         http_client = HTTPRequest(self.base_url)
         if self.method == "GET":
             
