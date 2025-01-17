@@ -226,14 +226,14 @@ class GetFrequencyApiView(BaseAPIView):
     endpoint = "PASService/rest/services/queries/GetFrequencyDetails"
     method = "GET"
     has_params = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.236:8012/"
 
 class GetDurationsApiView(BaseAPIView):
     role = settings.API_NILAS_GET_DURATIONS
     endpoint = "PASService/rest/services/queries/GetDurationDetails"
     method = "GET"
     has_params = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.236:8012/"
 
 class CustomerSearchApiView(BaseAPIView):
     role = settings.API_NILAS_CUSTOMER_SEARCH
@@ -364,7 +364,7 @@ class AsCodeRelationshipsApiView(BaseAPIView):
     method = "GET"
     has_body = False
     has_params = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.236:8012/"
 
 
 
@@ -374,7 +374,7 @@ class AsCodeBritamOccupationApiView(BaseAPIView):
     method = "GET"
     has_body = False
     has_params = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.236:8012/"
 
 
 class AsCodeClientPrefixApiView(BaseAPIView):
@@ -383,7 +383,7 @@ class AsCodeClientPrefixApiView(BaseAPIView):
     method = "GET"
     has_body = False
     has_params = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.236:8012/"
 
 
 class AsCodeMaritalStatusApiView(BaseAPIView):
@@ -392,6 +392,6 @@ class AsCodeMaritalStatusApiView(BaseAPIView):
     method = "GET"
     has_body = False
     has_params = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.236:8012/"
 
 
