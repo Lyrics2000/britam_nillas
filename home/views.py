@@ -37,8 +37,7 @@ class BaseAPIView(APIView):
         logger.info(f"Body: {body}, Params:{params}")
         logger.info(f"HasBody: {self.has_body}")
         http_client = HTTPRequest(self.base_url)
-        if self.method == "GET":
-            
+        if self.method == "GET":            
             return http_client.send_get_request(f"{self.endpoint}",body=body,params=params)
         elif self.method == "POST":
             return http_client.send_post_request(f"{self.endpoint}", data=body)
@@ -48,6 +47,9 @@ class BaseAPIView(APIView):
             return http_client.send_patch_request(f"{self.endpoint}", data=body)
         elif self.method == "DELETE":
             return http_client.send_delete_request(f"{self.endpoint}", params=params)
+        elif self.method == "SEND_AS_GET":
+            return http_client.send_get_request(f"{self.endpoint}",body=body,params=params)
+        
         
 
         else:
@@ -208,7 +210,7 @@ class CreatePaymentDetailsApiView(BaseAPIView):
 class GetAllPlanApiView(BaseAPIView):
     role = settings.API_NILAS_GET_ALL_PLAN
     endpoint = "uw_product/getAllPlanByAge"
-    method = "GET"
+    method = "SEND_AS_GET"
     has_body =True
     base_url = "http://10.10.3.237:9099/"
 
