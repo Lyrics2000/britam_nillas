@@ -155,3 +155,36 @@
 2025-01-17 12:51:59,275 - DEBUG - Starting new HTTP connection (1): 10.10.3.237:9099
 2025-01-17 12:51:59,290 - DEBUG - http://10.10.3.237:9099 "GET /uw_product/getAllPlanByAge HTTP/11" 200 None
 2025-01-17 12:51:59,292 - INFO - the post response is {'response': [{'planNo': 901, 'planCats': 'U', 'mainBenfName': 'Base Cover - Unit-linked savings', 'termMin': 8, 'termMax': 22, 'sumAssuredMin': 1000, 'sumAssuredMax': 10000000, 'maxLifeAssured': None, 'medicalIndicator': 'N', 'isMainBenefit': 'Y', 'benefitOrder': '1', 'minimumEntryAge': 18, 'maximumEntryAge': 60, 'mandatory': 'Y', 'benefitNumber': '40', 'planName': 'Soma Sure Lite'}, {'planNo': 902, 'planCats': 'U', 'mainBenfName': 'Base Cover - Unit-linked savings', 'termMin': 8, 'termMax': 22, 'sumAssuredMin': 15000, 'sumAssuredMax': 100000000, 'maxLifeAssured': None, 'medicalIndicator': 'N', 'isMainBenefit': 'Y', 'benefitOrder': '1', 'minimumEntryAge': 18, 'maximumEntryAge': 60, 'mandatory': 'Y', 'benefitNumber': '50', 'planName': 'Soma Sure Premium'}, {'planNo': 900, 'planCats': 'U', 'mainBenfName': 'Base Cover - Unit-linked savings', 'termMin': 5, 'termMax': 10, 'sumAssuredMin': 200000, 'sumAssuredMax': 100000000, 'maxLifeAssured': None, 'medicalIndicator': 'N', 'isMainBenefit': 'Y', 'benefitOrder': '1', 'minimumEntryAge': 18, 'maximumEntryAge': 80, 'mandatory': 'Y', 'benefitNumber': '59', 'planName': 'Imarika Plus'}, {'planNo': 903, 'planCats': 'U', 'mainBenfName': 'Base Cover - Unit-linked savings', 'termMin': 5, 'termMax': 15, 'sumAssuredMin': 1000, 'sumAssuredMax': 10000000, 'maxLifeAssured': None, 'medicalIndicator': 'N', 'isMainBenefit': 'Y', 'benefitOrder': '1', 'minimumEntryAge': 18, 'maximumEntryAge': 65, 'mandatory': 'Y', 'benefitNumber': '62', 'planName': 'Nawiri Insurance Savings Plan - Lite'}, {'planNo': 904, 'planCats': 'U', 'mainBenfName': 'Base Cover - Unit-linked savings', 'termMin': 5, 'termMax': 15, 'sumAssuredMin': 15000, 'sumAssuredMax': 100000000, 'maxLifeAssured': None, 'medicalIndicator': 'N', 'isMainBenefit': 'Y', 'benefitOrder': '1', 'minimumEntryAge': 18, 'maximumEntryAge': 65, 'mandatory': 'Y', 'benefitNumber': '71', 'planName': 'Nawiri Insurance Savings Plan - Premium'}], 'responseStatus': 'Success'}
+2025-01-17 14:32:41,128 - INFO - WSGI file is being executed.
+2025-01-17 14:32:53,275 - DEBUG - Starting new HTTPS connection (1): brtgw.britam.com:443
+2025-01-17 14:32:54,168 - DEBUG - https://brtgw.britam.com:443 "GET /api/auth/verify/ HTTP/11" 401 65
+2025-01-17 14:32:57,104 - INFO - Body: {'dob': '1979-12-01', 'gender': 'M', 'occupation': 'Farmer', 'smoker': 'Y'}, Params:{}
+2025-01-17 14:32:57,105 - INFO - HasBody: True
+2025-01-17 14:32:58,226 - INFO - The url is uw_product/getProductsByAge
+2025-01-17 14:32:58,228 - INFO - The data sent is {'dob': '1979-12-01', 'gender': 'M', 'occupation': 'Farmer', 'smoker': 'Y'}
+2025-01-17 14:32:58,236 - DEBUG - Starting new HTTP connection (1): 10.10.3.236:8012
+2025-01-17 14:32:58,254 - DEBUG - http://10.10.3.236:8012 "GET / HTTP/11" 200 None
+2025-01-17 14:32:59,592 - INFO - The payload is : {"dob": "1979-12-01", "gender": "M", "occupation": "Farmer", "smoker": "Y"} 
+2025-01-17 14:32:59,594 - INFO - The get url is http://10.10.3.236:8012/uw_product/getProductsByAge?
+2025-01-17 14:32:59,596 - INFO - the query params are {}
+2025-01-17 14:32:59,603 - DEBUG - Starting new HTTP connection (1): 10.10.3.236:8012
+2025-01-17 14:32:59,642 - DEBUG - http://10.10.3.236:8012 "GET /uw_product/getProductsByAge HTTP/11" 404 799
+2025-01-17 14:32:59,646 - INFO - the post response is <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;uw_product&#47;getProductsByAge] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat (TomEE)/10.0.27 (9.1.0)</h3></body></html>
+2025-01-17 14:32:59,660 - ERROR - Internal Server Error: /api/v1/product-search/
+2025-01-17 14:33:16,863 - DEBUG - Starting new HTTPS connection (1): brtgw.britam.com:443
+2025-01-17 14:33:17,833 - DEBUG - https://brtgw.britam.com:443 "GET /api/auth/verify/ HTTP/11" 401 65
+2025-01-17 14:33:21,040 - INFO - Body: {'dob': '1979-12-01', 'gender': 'M', 'occupation': 'Farmer', 'smoker': 'Y'}, Params:{}
+2025-01-17 14:33:21,046 - INFO - HasBody: True
+2025-01-17 14:33:25,177 - INFO - The url is uw_product/getProductsByAge
+2025-01-17 14:33:25,180 - INFO - The data sent is {'dob': '1979-12-01', 'gender': 'M', 'occupation': 'Farmer', 'smoker': 'Y'}
+2025-01-17 14:33:25,197 - DEBUG - Starting new HTTP connection (1): 10.10.3.236:8012
+2025-01-17 14:33:25,238 - DEBUG - http://10.10.3.236:8012 "GET / HTTP/11" 200 None
+2025-01-17 14:33:25,246 - INFO - The payload is : {"dob": "1979-12-01", "gender": "M", "occupation": "Farmer", "smoker": "Y"} 
+2025-01-17 14:33:25,248 - INFO - The get url is http://10.10.3.236:8012/uw_product/getProductsByAge?
+2025-01-17 14:33:25,250 - INFO - the query params are {}
+2025-01-17 14:33:46,692 - DEBUG - Starting new HTTP connection (1): 10.10.3.236:8012
+2025-01-17 14:33:46,721 - DEBUG - http://10.10.3.236:8012 "GET /uw_product/getProductsByAge HTTP/11" 404 799
+2025-01-17 14:34:30,060 - INFO - the post response is <!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} h1 {font-size:22px;} h2 {font-size:16px;} h3 {font-size:14px;} p {font-size:12px;} a {color:black;} .line {height:1px;background-color:#525D76;border:none;}</style></head><body><h1>HTTP Status 404 – Not Found</h1><hr class="line" /><p><b>Type</b> Status Report</p><p><b>Message</b> The requested resource [&#47;uw_product&#47;getProductsByAge] is not available</p><p><b>Description</b> The origin server did not find a current representation for the target resource or is not willing to disclose that one exists.</p><hr class="line" /><h3>Apache Tomcat (TomEE)/10.0.27 (9.1.0)</h3></body></html>
+2025-01-17 14:34:30,072 - ERROR - Internal Server Error: /api/v1/product-search/
+2025-01-17 14:35:07,275 - INFO - C:\Users\jkorio\pyproj\britam_nillas\home\views.py changed, reloading.
+2025-01-17 14:35:11,089 - INFO - WSGI file is being executed.

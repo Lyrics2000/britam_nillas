@@ -129,7 +129,7 @@ MEDIA_ROOT = os.path.join('media_cdn')
 INDEV = True
 
 if INDEV:
-    BASE_URL  = "http://10.10.3.236:8012"
+    BASE_URL  = "http://10.10.3.237:9099"
     USERNAME = "sladmin"
     PASSWORD  = "sladmin123"
 else:
