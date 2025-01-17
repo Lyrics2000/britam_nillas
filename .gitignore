@@ -1,3 +1,110 @@
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# Django-specific files
+db.sqlite3
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+
+# If using migrations
+migrations/
+static_cdn/
+
+# Environment files
+.env
+*.env
+.env.dev
+.env.prod
+
+# Virtual environments
+venv/
+.env/
 env/
-app.log/
-http/all.http
+.venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDEs and editors
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Static and media files
+/static/
+/media/
+
+# System files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test coverage reports
+htmlcov/
+.coverage
+.tox/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+*.hypothesis/
+
+# Temporary files
+*.tmp
+*.bak
+*.old
+*.orig
+
+# Packaging
+*.egg
+*.egg-info/
+dist/
+build/
+*.manifest
+*.spec
+
+# PyInstaller
+*.manifest
+*.spec
+
+# pytest
+.cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Local dumps
+dump.rdb
+dump-resque.rdb
+*.sql
+
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# Secrets and keys
+*.pem
+
+http/
+
+# Gunicorn
+gunicorn.log
+gunicorn-access.log
+gunicorn-error.log
+
+# Pip
+pip-log.txt
+pip-delete-this-directory.txt
+
+# MyPy
+.mypy_cache/
+
+# Pytest
+.pytest_cache/

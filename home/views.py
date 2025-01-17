@@ -1,3 +1,4 @@
+import logging
 from django.shortcuts import render
 from utils.logging import log_api_request
 from rest_framework.views import APIView
@@ -5,7 +6,7 @@ from rest_framework.response import Response
 from .Middleware import MicrosoftValidation
 from rest_framework import status
 from utils.HTTPRequest import HTTPRequest
-
+logger = logging.getLogger(__name__)
 # A utility function to handle logging
 def log_view_request(view_name, request, message, level="INFO"):
     log_data = {
@@ -33,6 +34,7 @@ class BaseAPIView(APIView):
         Determines the appropriate HTTP method and sends the request.
         """
         body, params = self.process_request(request)
+        logger.info(f"Body: {body}, Params:{params}")
         http_client = HTTPRequest(self.base_url)
         if self.method == "GET":
             
