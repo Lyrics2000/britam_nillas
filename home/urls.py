@@ -40,6 +40,7 @@ from .views import (
 
 app_name = "home"
 
+
 urlpatterns = [
     path("get-case/", GetCaseApiView.as_view(), name="get-case"),
     path("create-member/", CreateMemberApiView.as_view(), name="create-member"),
