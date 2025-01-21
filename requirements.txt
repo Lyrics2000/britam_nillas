@@ -50,3 +50,4 @@ wcwidth==0.2.13
 django-background-tasks
 xmltodict
 djangorestframework-xml
+django-cors-headers
