@@ -241,6 +241,7 @@ class GetCaseApiView(BaseAPIView):
     method = "GET"
     has_params = True
     base_url = "http://10.10.3.237:9099/"
+    
 
 class GetDurationsApiView(BaseAPIView):
     role = settings.API_NILAS_GET_DURATIONS
