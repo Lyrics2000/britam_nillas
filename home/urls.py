@@ -34,12 +34,14 @@ from .views import (
     AsCodeBritamOccupationApiView,
     AsCodeClientPrefixApiView,
     AsCodeMaritalStatusApiView,
-    GetClientsApiView
+    GetClientsApiView,
+    GetCaseApiView
 )
 
 app_name = "home"
 
 urlpatterns = [
+    path("get-case/", GetCaseApiView.as_view(), name="get-case"),
     path("create-member/", CreateMemberApiView.as_view(), name="create-member"),
     path("create-nominee/", CreateNomineeApiView.as_view(), name="create-nominee"),
     path("create-financial-info/", CreateFinancialInfoApiView.as_view(), name="create-financial-info"),

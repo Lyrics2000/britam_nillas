@@ -181,7 +181,7 @@ class ProductSearchApiView(BaseAPIView):
 
 class CreateQuoteApiView(BaseAPIView):
     role = settings.API_NILAS_CREATE_QUOTE
-    endpoint = "uw_quotes/createQuotes"
+    endpoint = "uw_quotes/generateQuote"
     method = "POST"
     has_body = True
     base_url = "http://10.10.3.237:9099/"
@@ -234,6 +234,13 @@ class GetClientsApiView(BaseAPIView):
     method = "GET"
     has_params = True
     base_url = "http://10.10.3.236:8012/"
+
+class GetCaseApiView(BaseAPIView):
+    role = settings.API_NILAS_GET_CLIENTS
+    endpoint = "uw_case/getCase"
+    method = "GET"
+    has_params = True
+    base_url = "http://10.10.3.237:9099/"
 
 class GetDurationsApiView(BaseAPIView):
     role = settings.API_NILAS_GET_DURATIONS
