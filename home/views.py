@@ -236,7 +236,7 @@ class GetClientsApiView(BaseAPIView):
     base_url = "http://10.10.3.236:8012/"
 
 class GetCaseApiView(BaseAPIView):
-    role = settings.API_NILAS_GET_CLIENTS
+    role = settings.API_NILAS_GET_CASE
     endpoint = "uw_case/getCase"
     method = "GET"
     has_params = True
