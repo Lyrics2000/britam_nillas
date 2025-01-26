@@ -149,77 +149,77 @@ class CreateMemberApiView(BaseAPIView):
     endpoint = "uw_member/createMember"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class CreateNomineeApiView(BaseAPIView):
     role = settings.API_NILAS_CREATE_NOMINEE
     endpoint = "uw_nominee/createNominee"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class CreateFinancialInfoApiView(BaseAPIView):
     role = settings.API_NILAS_CREATE_FINANCIAL_INFO
     endpoint = "uw_mbrFinInfo/createMbrFinInfo"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class CreateMemberLifeStyleApiView(BaseAPIView):
     role = settings.API_NILAS_CREATE_MEMBER_LIFESTYLE
     endpoint = "uw_memLifeStyle/saveMbrLifeStyle"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class ProductSearchApiView(BaseAPIView):
     role = settings.API_NILAS_PRODUCT_SEARCH
     endpoint = "uw_product/getProductsByAge"
     method = "SEND_AS_GET"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class CreateQuoteApiView(BaseAPIView):
     role = settings.API_NILAS_CREATE_QUOTE
     endpoint = "uw_quotes/generateQuote"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class SaveApplicationApiView(BaseAPIView):
     role = settings.API_NILAS_SAVE_APPLICATION
     endpoint = "uw_case/createCase"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class PayoutDetailsApiView(BaseAPIView):
     role = settings.API_NILAS_PAYOUT_DETAILS
     endpoint = "uw_PayOutMode/savePayOutMode"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class CreatePaymentDetailsApiView(BaseAPIView):
     role = settings.API_NILAS_CREATE_PAYMENT_DETAILS
     endpoint = "uw_polPremium/createPolPremium"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class GetAllPlanApiView(BaseAPIView):
     role = settings.API_NILAS_GET_ALL_PLAN
     endpoint = "uw_product/getAllPlanByAge"
     method = "SEND_AS_GET"
     has_body =True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class GetAllProductByPlanNoApiView(BaseAPIView):
     role = settings.API_NILAS_GET_ALL_PRODUCT_BY_PLAN_NO
     endpoint = "uw_product/getAllProductByPlanNo"
     method = "SEND_AS_GET"
     has_body =  True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class GetFrequencyApiView(BaseAPIView):
     role = settings.API_NILAS_GET_FREQUENCY
@@ -240,7 +240,7 @@ class GetCaseApiView(BaseAPIView):
     endpoint = "uw_case/getCase"
     method = "GET"
     has_params = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 
 
@@ -259,98 +259,98 @@ class CustomerSearchApiView(BaseAPIView):
     endpoint = "profinch-insurance/customerSearch"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:7701/"
+    base_url = "http://10.10.3.197:7701/"
 
 class GetPremiumLimitsApiView(BaseAPIView):
     role = settings.API_NILAS_GET_PREMIUM_LIMITS
     endpoint = "uw_product/getPremiumLimits"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class CreatePayoutModeApiView(BaseAPIView):
     role = settings.API_NILAS_CREATE_PAYOUT_MODE
     endpoint = "uw_PayOutMode/savePayOutMode"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class IdentificationDetailsApiView(BaseAPIView):
     role = settings.API_NILAS_IDENTIFICATION_DETAILS
     endpoint = "uw_member/identificationDetails"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class DocumentsUploadApiView(BaseAPIView):
     role = settings.API_NILAS_DOCUMENTS_UPLOAD
     endpoint = "documents/upload"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class PayerDetailsApiView(BaseAPIView):
     role = settings.API_NILAS_PAYER_DETAILS
     endpoint = "uw_member/payerDetails"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class InitialPaymentDetailsApiView(BaseAPIView):
     role = settings.API_NILAS_INITIAL_PAYMENT_DETAILS
     endpoint = "uw_PayOutMode/initialPaymentDetails"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class PaymentDetailsApiView(BaseAPIView):
     role = settings.API_NILAS_PAYMENT_DETAILS
     endpoint = "uw_polPremium/paymentDetails"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class GenerateApplicationIdApiView(BaseAPIView):
     role = settings.API_NILAS_GENERATE_APPLICATION_ID
     endpoint = "uw_random/generateApplicationId"
     method = "GET"
     has_params = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class InsuredDetailsApiView(BaseAPIView):
     role = settings.API_NILAS_INSURED_DETAILS
     endpoint = "uw_case/insuredDetails"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class UpdateFinancialInfoApiView(BaseAPIView):
     role = settings.API_NILAS_UPDATE_FINANCIAL_INFO
     endpoint = "uw_mbrFinInfo/updateFinancialInfo"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class SubmitMedicalsApiView(BaseAPIView):
     role = settings.API_NILAS_SUBMIT_MEDICALS
     endpoint = "uw_case/submitMedicals"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class SubmitAdditionalMedicalsApiView(BaseAPIView):
     role = settings.API_NILAS_SUBMIT_ADDITIONAL_MEDICALS
     endpoint = "medicalService/submitAdditionalMedicals"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class BeneficiaryDetailsApiView(BaseAPIView):
     role = settings.API_NILAS_BENEFICIARY_DETAILS
     endpoint = "uw_case/beneficiaryDetails"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 
 class NomineeDetailsApiView(BaseAPIView):
@@ -358,14 +358,14 @@ class NomineeDetailsApiView(BaseAPIView):
     endpoint = "uw_case/nomineeDetails"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 class SubSequentPaymentApiView(BaseAPIView):
     role = settings.API_NILAS_SUBSEQUENT_PAYMENT
     endpoint = "uw_PayOutMode/subSequentPayment"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 
 class FinalSubmissionCaseApplicationApiView(BaseAPIView):
@@ -373,7 +373,7 @@ class FinalSubmissionCaseApplicationApiView(BaseAPIView):
     endpoint = "uw_case/finalSubmissionCaseApplication"
     method = "POST"
     has_body = True
-    base_url = "http://10.10.3.237:9099/"
+    base_url = "http://10.10.3.197:9099/"
 
 
 
