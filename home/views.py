@@ -228,6 +228,13 @@ class GetFrequencyApiView(BaseAPIView):
     has_params = True
     base_url = "http://10.10.3.236:8012/"
 
+class GetFilterbyAgentIdApiView(BaseAPIView):
+    role = settings.API_NILAS_FILTER_BY_AGENT_ID
+    endpoint = "uw_case/by-agent"
+    method = "GET"
+    has_params = True
+    base_url = "http://10.10.3.197:9099/"
+
 class GetClientsApiView(BaseAPIView):
     role = settings.API_NILAS_GET_CLIENTS
     endpoint = "PASService/rest/services/v1/clients"

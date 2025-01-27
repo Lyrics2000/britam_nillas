@@ -35,13 +35,15 @@ from .views import (
     AsCodeClientPrefixApiView,
     AsCodeMaritalStatusApiView,
     GetClientsApiView,
-    GetCaseApiView
+    GetCaseApiView,
+    GetFilterbyAgentIdApiView
 )
 
 app_name = "home"
 
 
 urlpatterns = [
+    path("filter/agent-id/",GetFilterbyAgentIdApiView.as_view()),
     path("get-case/", GetCaseApiView.as_view(), name="get-case"),
     path("create-member/", CreateMemberApiView.as_view(), name="create-member"),
     path("create-nominee/", CreateNomineeApiView.as_view(), name="create-nominee"),
