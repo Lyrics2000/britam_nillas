@@ -226,7 +226,7 @@ class GetFrequencyApiView(BaseAPIView):
     endpoint = "PASService/rest/services/v1/codes"
     method = "GET"
     has_params = True
-    base_url = "http://10.10.3.236:8012/"
+    base_url = "http://10.10.4.34:5050/"
 
 class GetFilterbyAgentIdApiView(BaseAPIView):
     role = settings.API_NILAS_FILTER_BY_AGENT_ID
