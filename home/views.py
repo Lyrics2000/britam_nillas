@@ -223,10 +223,10 @@ class GetAllProductByPlanNoApiView(BaseAPIView):
 
 class GetFrequencyApiView(BaseAPIView):
     role = settings.API_NILAS_GET_FREQUENCY
-    endpoint = "PASService/rest/services/v1/codes"
+    endpoint = "profinch-insurance/GetFrequencyDetails"
     method = "GET"
     has_params = True
-    base_url = "http://10.10.4.34:5050/"
+    base_url = "http://10.10.3.197:7701/"
 
 class GetFilterbyAgentIdApiView(BaseAPIView):
     role = settings.API_NILAS_FILTER_BY_AGENT_ID
