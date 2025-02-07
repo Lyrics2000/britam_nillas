@@ -36,7 +36,18 @@ from .views import (
     AsCodeMaritalStatusApiView,
     GetClientsApiView,
     GetCaseApiView,
-    GetFilterbyAgentIdApiView
+    GetFilterbyAgentIdApiView,
+    GetProcessPartialApiView,
+    GetPartialDetailsApiView,
+    UpdatePayoutApiView,
+    GetMonthlyStatementsApiView,
+    GetTaxCertificateApiView,
+    PremiumRenewalApiView,
+    GetBankAccountsApiView,
+    GetBeneficiaryApiView,
+    GetBankAccountPoliciesApiView,
+    GetPolicyDetailsApiView,
+    GetBenefitsApiView
 )
 
 app_name = "home"
@@ -99,5 +110,54 @@ urlpatterns = [
         "as-code-marital-status/",
         AsCodeMaritalStatusApiView.as_view(),
         name="as-code-marital-status",
+    ),
+
+
+
+
+    path(
+        "process-partial/",
+        GetProcessPartialApiView.as_view()
+    ),
+    path(
+        "get-partial-details/",
+        GetPartialDetailsApiView.as_view()
+    ),
+    path(
+        "update-payout/",
+        UpdatePayoutApiView.as_view()
+        ),
+    path(
+        "get-monthly-statements/",
+        GetMonthlyStatementsApiView.as_view()
+    ),
+    path(
+        "get-tax-certificate/",
+        GetTaxCertificateApiView.as_view()
+    ),
+    path(
+        "premium-renewal/",
+        PremiumRenewalApiView.as_view()
+    ),
+    path(
+        "bank-accounts/",
+        GetBankAccountsApiView.as_view()
+    ),
+    path(
+        "get-beneficiaries/",
+        GetBeneficiaryApiView.as_view()
+    ),
+    path (
+        "get-bank-account-policies/",
+        GetBankAccountPoliciesApiView.as_view()
+    ),
+    path(
+        "get-policy-details/",
+        GetPolicyDetailsApiView.as_view()
+    ),
+    path(
+        "get-benefits/",
+        GetBenefitsApiView.as_view()
     )
+
 ]

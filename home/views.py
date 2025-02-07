@@ -214,6 +214,50 @@ class GetAllPlanApiView(BaseAPIView):
     has_body =True
     base_url = "http://10.10.3.197:9099/"
 
+class GetProcessPartialApiView(BaseAPIView):
+    role = settings.API_NILAS_PROCESS_PARTIAL
+    endpoint = "insurance/asPartialDetails_EPW"
+    method = "POST"
+    has_body =  True
+    base_url = "http://10.10.3.197:9100/"
+
+class GetPartialDetailsApiView(BaseAPIView):
+    role = settings.API_NILAS_GET_PARTIAL
+    endpoint = "insurance/asPartialDetails_EPW"
+    method = "POST"
+    has_body =  True
+    base_url = "http://10.10.3.197:9100/"
+
+
+class UpdatePayoutApiView(BaseAPIView):
+    role = settings.API_NILAS_UPDATE_PAYOUT
+    endpoint = "insurance/asPayouts_EPO"
+    method = "POST"
+    has_body =  True
+    base_url = "http://10.10.3.197:9100/"
+
+class GetMonthlyStatementsApiView(BaseAPIView):
+    role = settings.API_NILAS_GET_MONTHLY_STATEMENTS
+    endpoint = "insurance/asMonthlyStatements_EMS"
+    method = "POST"
+    has_body =  True
+    base_url = "http://10.10.3.197:9100/"
+
+class GetTaxCertificateApiView(BaseAPIView):
+    role = settings.API_NILAS_GET_TAX_CERTIFICATE
+    endpoint = "insurance/asTaxCertificate_ETC"
+    method = "POST"
+    has_body =  True
+    base_url = "http://10.10.3.197:9100/"
+
+
+class PremiumRenewalApiView(BaseAPIView):
+    role = settings.API_NILAS_PREMIUM_RENEWAL
+    endpoint = "insurance/asRenewalPremium_BRP"
+    method = "POST"
+    has_body =  True
+    base_url = "http://10.10.3.197:9100/"
+
 class GetAllProductByPlanNoApiView(BaseAPIView):
     role = settings.API_NILAS_GET_ALL_PRODUCT_BY_PLAN_NO
     endpoint = "uw_product/getAllProductByPlanNo"
@@ -227,6 +271,45 @@ class GetFrequencyApiView(BaseAPIView):
     method = "GET"
     has_params = True
     base_url = "http://10.10.3.197:7701/"
+
+class GetBankAccountsApiView(BaseAPIView):
+    role = settings.API_NILAS_GET_BANK_ACCOUNTS
+    endpoint = "profinch-insurance/getBankAccount"
+    method = "GET"
+    has_params = True
+    base_url = "http://10.10.3.197:7701/"
+
+class GetBeneficiaryApiView(BaseAPIView):
+    role = settings.API_NILAS_GET_BENEFICIARIES
+    endpoint = "profinch-insurance/getBeneficiaryDetails"
+    method = "GET"
+    has_params = True
+    base_url = "http://10.10.3.197:7701/"
+
+
+class GetBankAccountPoliciesApiView(BaseAPIView):
+    role = settings.API_NILAS_GET_BANK_ACCOUNT_POLICIES
+    endpoint = "profinch-insurance/getBankAccountPolicies"
+    method = "GET"
+    has_params = True
+    base_url = "http://10.10.3.197:7701/"
+
+
+class GetPolicyDetailsApiView(BaseAPIView):
+    role = settings.API_NILAS_GET_POLICY_DETAILS
+    endpoint = "profinch-insurance/getPolicyDetails"
+    method = "GET"
+    has_params = True
+    base_url = "http://10.10.3.197:7701/"
+
+
+class GetBenefitsApiView(BaseAPIView):
+    role = settings.API_NILAS_GET_BENEFITS
+    endpoint = "profinch-insurance/getBenefitDetails"
+    method = "GET"
+    has_params = True
+    base_url = "http://10.10.3.197:7701/"
+
 
 class GetFilterbyAgentIdApiView(BaseAPIView):
     role = settings.API_NILAS_FILTER_BY_AGENT_ID
