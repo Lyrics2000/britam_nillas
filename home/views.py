@@ -320,10 +320,10 @@ class GetFilterbyAgentIdApiView(BaseAPIView):
 
 class GetClientsApiView(BaseAPIView):
     role = settings.API_NILAS_GET_CLIENTS
-    endpoint = "PASService/rest/services/v1/clients"
+    endpoint = "profinch-insurance/getClients"
     method = "GET"
     has_params = True
-    base_url = "http://10.10.3.236:8012/"
+    base_url = "http://10.10.3.197:7701/"
 
 class GetCaseApiView(BaseAPIView):
     role = settings.API_NILAS_GET_CASE
@@ -339,10 +339,10 @@ class GetCaseApiView(BaseAPIView):
 
 class GetDurationsApiView(BaseAPIView):
     role = settings.API_NILAS_GET_DURATIONS
-    endpoint = "PASService/rest/services/queries/GetDurationDetails"
+    endpoint = "profinch-insurance/getDurationDetails"
     method = "GET"
     has_params = True
-    base_url = "http://10.10.3.236:8012/"
+    base_url = "http://10.10.3.197:7701/"
 
 class CustomerSearchApiView(BaseAPIView):
     role = settings.API_NILAS_CUSTOMER_SEARCH
@@ -469,38 +469,38 @@ class FinalSubmissionCaseApplicationApiView(BaseAPIView):
 
 class AsCodeRelationshipsApiView(BaseAPIView):
     role = settings.API_NILAS_AS_CODE_RELATIONSHIPS
-    endpoint = "PASService/rest/services/v1/codes"
+    endpoint = "profinch-insurance/relationshipsLookupList"
     method = "GET"
     has_body = False
     has_params = True
-    base_url = "http://10.10.3.236:8012/"
+    base_url = "http://10.10.3.197:7701/"
 
 
 
 class AsCodeBritamOccupationApiView(BaseAPIView):
     role = settings.API_NILAS_AS_CODE_BRITAM_OCCUPATION
-    endpoint = "PASService/rest/services/v1/codes"
+    endpoint = "profinch-insurance/britamOccupationLookupList"
     method = "GET"
     has_body = False
     has_params = True
-    base_url = "http://10.10.3.236:8012/"
+    base_url = "http://10.10.3.197:7701/"
 
 
 class AsCodeClientPrefixApiView(BaseAPIView):
     role = settings.API_NILAS_AS_CODE_CLIENT_PREFIX
-    endpoint = "PASService/rest/services/v1/codes"
+    endpoint = "profinch-insurance/clientPrefix"
     method = "GET"
     has_body = False
     has_params = True
-    base_url = "http://10.10.3.236:8012/"
+    base_url = "http://10.10.3.197:7701/"
 
 
 class AsCodeMaritalStatusApiView(BaseAPIView):
     role = settings.API_NILAS_AS_CODE_MARITAL_STATUS
-    endpoint = "PASService/rest/services/v1/codes"
+    endpoint = "profinch-insurance/MaritalStatus"
     method = "GET"
     has_body = False
     has_params = True
-    base_url = "http://10.10.3.236:8012/"
+    base_url = "http://10.10.3.197:7701/"
 
 
